@@ -1,10 +1,15 @@
 ### input, readline
+
 ## 1. input을 이용한 기본 문법
+
+# input으로 입력받은 값은 문자열 => 숫자인 경우 형변환 필요
 n = int(input())
 print(n)
 
 
 ## 2. readline을 이용한 빠른 입력
+
+# input의 경우 개행이 같이 들어감 => 입력받다가 시간초과 발생하기 때문에 readline 사용
 import sys
 
 # 괄호쓰면 결과 할당하는건데 이거는 함수 자체를 할당하는것. readline을 인풋이란 이름으로 쓸 거야
@@ -23,6 +28,8 @@ print(word) # ['h', 'e','l','l','o','\n']
 word = list(input().rstrip())
 print(word) # ['h', 'e','l','l','o']
 
+# *문자열을 리스트로 입력받을 땐 rstrip() 꼭 해주기!
+
 
 ## 3. 한 줄 리스트 입력
 import sys
@@ -32,6 +39,7 @@ input = sys.stdin.readline
 # numbers = map(int, input())
 # print(numbers) <map object at 0x00000245B5FE4400> map이라고만 쓰면 주소값만 나옴! list 붙여줘야 함
 
+# map 객체는 list로 변환해줘야 함
 numbers = list(map(int, input().split()))
 print(numbers)
 

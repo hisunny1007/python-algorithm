@@ -8,13 +8,15 @@ print("1", "2", "3")  # 1 2 3
 
 ## 2. 맨 끝의 개행을 다른 문자로 바꿀 수 있다. (end)
 print("hello", end="$")  # hello$
-print("python")  # hello$python 개행안하고 $ 로 바꿨으니까 이렇게 나옴
+print("python")  # hello$python (개행 대신에 $ 로 바꿨기 때문)
 # print("python", end="\n") # end="\n" 생략되어있음 (print 자체가 기본값이 개행으로 되어있음)
 
 
 ## 3. 구분자를 다른 문자로 바꿀 수 있다. (sep)
 print("1", "2", "3", sep="$")  # 1$2$3
-print("1", "2", "3", sep="\n")  # 자주 쓰이는 것! (한 줄씩 출력)
+
+# 알고리즘 풀이할 때 자주 사용됨
+print("1", "2", "3", sep="\n")  # 한 줄씩 출력
 # 1
 # 2
 # 3
@@ -26,9 +28,7 @@ print("안녕하세요! " + name)  # 안녕하세요! sunny
 print(f"안녕하세요! {name}")  # 안녕하세요! sunny
 
 age = 40
-print(
-    f"안녕하세요! {name}, 나이는 {age - 20}입니다."
-)  # 안녕하세요! sunny, 나이는 20입니다.
+print(f"안녕하세요! {name}, 나이는 {age - 20}입니다.")  # 안녕하세요! sunny, 나이는 20입니다.
 
 
 ## 5. A + B - 7
